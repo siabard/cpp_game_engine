@@ -1,6 +1,11 @@
-#include "./include/test.hpp"
+#include "./include/engine.hpp"
 
-int main() {
+class Sandbox : public Engine::Application {
+  public:
+    Sandbox() {}
+    ~Sandbox() {} 
+};
 
-  Engine::Print();
+Engine::Application* Engine::CreateApplication() {
+  return new Sandbox();
 }
