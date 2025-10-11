@@ -1,11 +1,9 @@
-#include "./include/engine.hpp"
+#include "engine.hpp"
 
 class Sandbox : public Engine::Application {
-  public:
-    Sandbox() {}
-    ~Sandbox() {} 
+public:
+  Sandbox() {}
+  ~Sandbox() {} 
 };
 
-Engine::Application* Engine::CreateApplication() {
-  return new Sandbox();
-}
+Engine::Application *Engine::CreateApplication() { return new Sandbox(); }
