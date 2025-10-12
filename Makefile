@@ -1,6 +1,6 @@
 PROJ_NAME=main
 CC=g++
-CCFLAGS=-std=c++11 -Wall -g -c -fstack-protector -Iinclude
+CCFLAGS=-std=c++11 -Wall -g -c -fstack-protector -Iinclude -Ivendor/spdlog/include
 LIBS=
 SOURCES :=  $(wildcard **/*.cpp) $(wildcard *.cpp)
 OBJS := $(patsubst %.cpp, %.o, $(SOURCES))
