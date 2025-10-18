@@ -20,6 +20,6 @@
 #include <cstdlib>
 #include <cmath>
 #include <exception>
-
+#include <functional>
 
 #endif

@@ -1,7 +1,7 @@
 #ifndef __LOG_HPP__
 #define __LOG_HPP__
 
-#include <memory>
+#include "stdafx.hpp"
 #include "spdlog/spdlog.h"
 
 namespace Engine {
