@@ -9,7 +9,7 @@ namespace Engine {
     None = 0,
     WindowClose, WindowResize, WindowFocus, WindowLostFocus, WindowMoved,
     AppTick, AppUpdate, AppRender,
-    KeyPressed, KeyReleased,
+    KeyPressed, KeyReleased, KeyTyped,
     MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrollled,
   };
 
@@ -23,7 +23,7 @@ namespace Engine {
   };
 
 #define EVENT_CLASS_TYPE(type)						\
-  static EventType GetStaticType() { return EventType::##type; }		\
+  static EventType GetStaticType() { return EventType::type; }		\
   virtual EventType GetEventType() const override { return GetStaticType(); } \
   virtual const char* GetName() const override { return #type; }
 
@@ -64,8 +64,12 @@ namespace Engine {
     Event& m_Event;
   };
 
-  inline std::ostream &operator<<(std::ostream &os, const Event &e) {
+  inline std::ostream& operator<<(std::ostream &os, const Event &e) {
     return os << e.ToString();
+  }
+
+  inline std::string format_as(const Event &e) {
+    return e.ToString();
   }
 
 } // namespace Engine

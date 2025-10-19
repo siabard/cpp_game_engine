@@ -22,4 +22,5 @@
 #include <exception>
 #include <functional>
 
+#include <stdint.h>
 #endif
